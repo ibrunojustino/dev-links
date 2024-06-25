@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --text-color: white;
+    --bg-url: url(./Assets/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.5);
+    --surface-color-hover rgba(0, 0, 0, 0.02);
+    --hightlight-color: rgba(255, 255, 255, 0.2);
+    --switch-bg-urll: url(./MoonStars.svg);
+}
+
+.light{
+    --text-color: black;
+    --bg-url: url(./Assets/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --hightlight-color: rgba(0, 0, 0, 0.1);
+    --switch-bg-urll: url(./Sun.svg);
+}
+
+body{
+    background-image:  var(--bg-url);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+body *{
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+}
+
+#container{
+ width: 360px;
+ height: 712px;
+ border: 1px solid red;
+ margin: 56px auto 0;
+ padding: 0 24px;
+}
+
+/* PROFILE */
+
+#profile{
+    padding: 24px;
+    border: 1px solid red;
+}
+
+#profile img{
+    display: block; /* coloquei o display block para alinhar na forma do margin: auto (só funciona assim porque mudei o display*/
+    width: 112px;
+    margin: auto;
+}
+
+#profile p{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* BOTÃO  */
+
+#switch{
+    border: 1px solid red;
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-urll) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+
+    position: absolute;
+    top:50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.light #switch button{
+    right: 0;
+    left: initial;
+}
+
+#switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    -webkit-background-filter: blur(4px); 
+    border-radius: 9999px;
+}
+
+/* ESTILIZAÇÃO DOS LINKS */
+
+ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 16px;
+    padding: 24px 0px;
+}
+
+ul a{
+    display: flex;
+    justify-content: center;
+    border: 1px solid red;
+    padding: 16px 24px;
+    background: var(--surface-color);
+    border: 1px solid  var(--stroke-color);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    text-decoration: none;
+    font-weight: 500; /* PODERIA USAR BOLD TAMBÉM */
+    transition: background 0.2s;
+
+}
+
+/* hover - pseudoselector*/
+
+ul li a:hover{
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);;
+}
+
+/*Social links*/
+#social-links{
+    display: flex;
+    justify-content: center;
+    padding: 24px 0px;
+    font-size: 24px; /*Coloquei esse atributo porque toda vez que coloco isso, muda tudo dentro da caixa*/
+    transition: background 0.2s;
+}
+
+#social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+#social-links a:hover{
+    background: var(--hightlight-color);
+    border-radius: 50%;
+}
+
+footer{
+    padding: 24px;
+    text-align: center;
+    font-size: 14px;
+}
