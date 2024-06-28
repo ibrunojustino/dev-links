@@ -8,7 +8,7 @@
     --text-color: white;
     --bg-url: url(./Assets/bg-mobile.jpg);
     --stroke-color: rgba(255, 255, 255, 0.5);
-    --surface-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.2);
     --surface-color-hover rgba(0, 0, 0, 0.02);
     --hightlight-color: rgba(255, 255, 255, 0.2);
     --switch-bg-urll: url(./MoonStars.svg);
